@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--Apertar "CTRL+ENTER", fará você ir para uma nova linha mesmo que o cursor do mouse esteja entre <tags>-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<!--O comando ol>li*4 irá criar a estrutura <ol> com 4 <li> dentro.-->
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <!--A tag <ol> significa: Ordered List (Lista Ordenada)-->
+    <ol type="I" start="1"> <!--O type dentro da tag <ol> indica o tipo de lista. O start na tag <ol> indica o inicio da numeração da lista e só pode ser indicado um valor númerico.-->
+        <!--A tag <li> significa: List item (Item da Lista). Cada item da lista fica entre uma tag <li>-->
+        <li>Acordar</li> <!--Apartir do HTML5, o </li> se tornou opcional.-->
+        <li>Arrumar a cama
+        <li>Tomar banho</li>
+        <li>Tomar café
+        <li>Limpar a louça</li>
+        <li>Escovar os dentes</li>
+        <li>Estudar
+        <li>Almoçar</li>
+        <li>Escovar os dentes
+        <li>Estudar</li>
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+    <!--A tag <ul> significa: Unordered List (Lista não Ordenada). Utilizada quando a ordem dos itens na lista não faz diferença.-->
+    <ul type="circle"> <!--O type indica o tipo de lista e existem 3 tipos: disc, circle, square-->
+        <li>Pão</li>
+        <li><del>Leite</del></li>
+        <li>Tomate
+        <li>Manteiga
+        <li>Carne</li>
+        <li>Feijão
+        <li><ins>Arroz</ins></li>
+    </ul>
+    <h2>Minhas Linguagens Favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <h2>Meus Jogos Favoritos</h2>
+    <!--Criando uma lista dentro de outra-->
+    <ol>
+        <li><strong>PlayStation 2</strong></li>
+        <ul type="circle">
+            <li>Grand Theft Auto</li>
+            <ul type="square">
+                <li>GTA San Andreas</li>
+                <li>GTA Vice City</li>
+            </ul>
+            <li>Bomba Patch</li>
+        </ul>
+        <li><strong>Xbox 360</strong></li>
+        <ul type="disc">
+            <li>Grand Theft Auto</li>
+            <ul type="circle">
+                <li>GTA 5</li>
+                <li>GTA 4</li>
+            </ul>
+            <li>BF4</li>
+            <li>Forza Horizon 2</li>
+        </ul>
+        <li><strong>PlayStation 4</strong></li>
+        <ul type="square">
+            <li>Destiny 1</li>
+            <li>BF4</li>
+            <li>GTA 5</li>
+            <li>The Last of Us 1</li>
+            <li>Plant vs Zombies</li>
+        </ul>
+        <li><strong>PlayStation 1</strong></li>
+        <ul type="disc">
+            <li>Nascar</li>
+            <li>Apache Command</li>
+        </ul>
+    </ol>
+    <h2>Lista de Definições</h2>
+    <!--A tag <dl> significa: Definition List (Lista de Definição)-->
+    <dl>
+        <!--A tag <dt> significa: Definition Term (Termo de Definição)-->
+        <dt><abbr title="HyperText Markup Language">HTML</abbr></dt>
+        <!--A tag <dd> significa: Definition Description (Descrição de Definição)-->
+        <dd><em>Linguagem de marcação para a criação do conteúdo de um site.</em></dd>
+        <dt><abbr title="Cascading Style Sheets">CSS</abbr></dt>
+        <dd><em>Linguagem de marcação para a criação do design do site.</em></dd>
+        <dt><abbr title="JavaScript">JS</abbr></dt>
+        <dd><em>Linguagem de programação para a criação de interatividade de um site.</em></dd>
+    </dl>
+</body>
+</html>

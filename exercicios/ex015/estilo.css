@@ -1,0 +1,18 @@
+@charset "UTF-8"; /* Configurando o estilo dos carácteres para aceitar acentuações */
+/* Todos os arquivos que forem linkados a esse estilo em CSS, irão receber as configurações abaixo. */
+body {
+    background-color: slategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1 {
+    color: salmon;
+    background-color: rgb(95, 121, 146);
+}
+h2 {
+    color: skyblue;
+}
+p {
+    color: snow;
+    text-align: justify;
+}

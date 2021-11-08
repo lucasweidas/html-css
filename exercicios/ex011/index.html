@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicons/html5/favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho da janela do seu navegador.</p>
+    <!--A configuração das imagens dentro da tag <picture> deve seguir uma ordem de hierarquia, seja da menor para maior imagem ou vice-versa.-->
+    <picture>
+        <!--o (src) da tag <img> será mudado pela tag <source> com o atributo (srcset) de acordo com o tamanho da tela do usuário-->
+        <source media="(max-width: 750px)" srcset="imagens/pequena.png" type="image/png"> <!--Se a tela do usuário tiver até 750px-->
+        <source media="(max-width: 1050px)" srcset="imagens/media.png" type="image/png"> <!--Se a tela do usuário tiver entre 751px e 1050px-->
+        <img src="imagens/grande.png" alt="Imagem flexível"> <!--Se a tela do usuário tiver mais de 1050px-->
+        <!--A imagem da tag <img> é a padrão e só será mudada, caso a tela do usuário seja menor que 1051px-->
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <p>PodCast: GuanaCast &darr;</p>
+    <audio src="midia/guanacast-33.mp3" controls></audio>
+    <p>Música: Shine On &darr;</p>
+    <!--Os áudios são carregados em ordem, do primeiro até o último. Se o primeiro não estiver disponivel, vai tentar carregar o próximo e assim por diante. E caso não seja possivel carregar nenhum dos áudios, irá aparecer o parágrafo.-->
+    <audio preload="metadata" controls>
+        <source src="midia/shine-on.mp3" type="audio/mpeg">
+        <source src="midia/shine-on.ogg" type="audio/ogg">
+        <source src="midia/shine-on.wav" type="audio/wav"> <!--Evitar usar arquivos wav, porque eles são muito pesados.-->
+        <p>Infelizmente a mídia não está mais disponivel. <a href="midia/shine-on.mp3">Clique aqui para baixar o arquivo MP3</a>.</p>
+    </audio>
+    <!--Formatos compativeis: MP3, WAV, OGG -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicons/css3/favicon.ico" type="image/x-icon">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* box-level */
+
+            /* display: inline; Caso queira transformar o elemento em inline-level */
+            background-color: #87B3BD;
+            height: 300px;
+            width: 300px;
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: #E3C280;
+            /* shorthand de border */
+            border: 10px solid #E3C280;
+
+            /* Configure os valores no sentido horário: top -> right -> bottom -> left */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* shorthand de padding */
+            padding: 10px 10px 10px 10px;
+            /* Se todos os lados forem iguais, basta informar uma vez */
+            padding: 10px;
+            /* Se for informado apenas 2 valores, o primeiro valor será adicionado em "top" e "bottom", e o segundo em "right" e "left" */
+            padding: 10px 20px;
+
+            /* margin: auto; = centralizar horizontalmente */
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 14px;
+            /* shorthand de margin */
+            margin: 20px 20px 30px 14px;
+            /* para centralizar a margin da direita e esquerda */
+            margin: 20px auto 30px auto;
+
+            /* outline, é tracejado que fica dentro da margin */
+            outline-color: #212125;
+            outline-style: dashed;
+            outline-width: 5px;
+            /* shorthand de outline */
+            outline: #212125 dashed 5px;
+        }
+
+        a { /* inline-level */
+
+            /* display: block; Caso queira transformar o elemento em box-level */
+            border: 10px solid #E3C280;
+            padding: 10px;
+        }
+    </style>
+</head>
+<!-- DevTools (User Agent) = Navegador que está exibindo o conteúdo -->
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

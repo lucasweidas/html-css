@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Outras formatações</title>
+</head>
+<!--Ao selecionar um texto segurar a tecla SHIFT e apertar TAB, é possivel voltar com a identação do texto-->
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+    <!--A tag <code> utiliza um fonte mono espaçada, o que facilita a leitura do código-->
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+    <p>Utilizando as tags &lt;pre&gt; e &lt;code&gt; para deixar o exemplo de código abaixo em Python mais apresentável.</p>
+    <!--tag <pre> também é utilizada para formatação de texto. Todos tipo de espaço dentro da tag se mostrado na página, incluindo a indentação-->
+    <pre>
+        <code>
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else:
+        print(f'O número {num} é IMPAR')
+    print('Fim do programa')
+        </code>
+    </pre>
+    <h2>Citações simples (Sem quebra de linha)</h2>
+    <!--A tag <q> coloca texto entre aspas. Tente usar essa tag apenas para citações.-->
+    <p>Como diria o pai de um amigo: <q>O computador é um burro muito rápido</q>.</p>
+    <h2>Citações Completas</h2>
+    <p>Segundo Mauricio Samy Silva, no seu livro Fundamentos de HTML5 e CSS3:</p>
+    <!--A tag <blockquote> é utilizada para criar citações completas, inclusive com link-->
+    <blockquote cite="https://www.google.com.br/books/edition/Fundamentos_de_HTML5_e_CSS3/2iPYCQAAQBAJ?hl=pt-BR&gbpv=1">
+        Árvore do DOM, comumente chamada de árvore do documento é uma representação gráfica da marcação do documento, mostrando o interrelacionamento entre os nós do DOM.
+    </blockquote>
+    <h2>Abreviações</h2>
+    <!--A tag <abbr> é utilizada para especificarmos o significado das siglas-->
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr> e estou adorando!</p>
+    <h2>Texto Invertido</h2>
+    <!--Se a tag for <bdo dir="rtl">, o texto será escrito da direita para a esquerda. Se for <bdo dir="ltr">, o texto será escrito normalmente, da esquerda para a direita-->
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</body>
+</html>

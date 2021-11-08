@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*
+    Em HTML é id, em CSS é # (Só pode um elemento, por documento HTML)
+    Em HTML é class, em CSS é . (Pode vários elementos)
+*/
+
+body {
+    background-color: #D5D7F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #413473;
+}
+
+h1#principal {
+    text-align: center;
+    background-color: #413473;
+    color: #D5D7F2;
+}
+
+h2 {
+    color: #483e8cde;
+}
+
+/* Também é possivel selecionar o elemento, apenas informando o nome do seu id ou class */
+
+.basico {
+    color: #483e8cde;
+    font-weight: 500;
+}
+
+.intermediario {
+    color: #3e8c68de;
+    font-weight: 700;
+}
+
+.avancado {
+    color: #8c3e3ede;
+    font-weight: 900;
+}
+
+.destaque {
+    background-color: #c2c5f1;
+}
+
+#topo {
+    text-align: center;
+    color: #483e8cde;
+}

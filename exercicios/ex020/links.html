@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicons/css3/favicon.ico" type="image/x-icon">
+    <title>Links</title>
+    <style>
+        /*  Seletores Personalizados
+            #   = id
+            .   = class
+            :   = pseudo-class
+            ::  = pseudo-element
+            >   = children
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited { /* Caso o usuário já tenha clicado no link */
+            color: darkblue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: royalblue;
+        }
+
+        a:active { /* Caso o usuário clique ou mantenha pressionado o mouse no link, irá mudar a cor do texto */
+            color: skyblue;
+        }
+
+        /* Abaixo é um pseudo-elemento, que pode ser identificado pelos :: */
+        .especial::before {
+            content: '→ ';
+        }
+
+        .especial::after {
+            content: ' ←';
+        }
+
+        .especial {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://www.cursoemvideo.com/course/curso-html5-e-css3-modulo-2-de-5-40-horas/aulas/modulo-2-2/" target="_blank" rel="external">Módulo 2 - Curso de HTML5 e CSS3</a></li>
+        <li><a href="https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf" target="_blank" rel="external">PDF's das Aulas</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="external" class="especial">Documentação da CSS na MDN</a></li>
+    </ul>
+</body>
+</html>

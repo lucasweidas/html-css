@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicons/css3/favicon.ico" type="image/x-icon">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            /* A recomentação oficial da W3C é que, para texto em telas, sempre utilize as medidas "px" ou "em".
+            Medidas Absolutas:
+            cm, mm, in, px, pt, pc
+            16px geralmente é igual a 1em. O "em" é sempre relativo ao tamanho da fonte padrão.
+
+            Medidas Relativas: 
+            em, ex, rem, vw, vh, %
+            */
+            font-size: 1em;
+            font-weight: normal;
+            /* Pesos de fontes normalmente aceitos: 
+            lighter, normal, bold, bolder
+            */
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            font-size: 2.5em;
+            font-style: italic;
+        }
+
+        h2 {
+            /* A ordem de uma shorthand font é:
+            font-style -> font-weight -> font-size -> font-family
+            */
+            font: italic bolder 2em Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium earum quas sit veniam repudiandae, ex, porro veritatis doloribus odio nisi quisquam maxime quis numquam consequatur nam sunt voluptatibus modi enim. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia nesciunt saepe eaque voluptates voluptas. Aliquid voluptatibus molestiae hic dicta similique cumque expedita laborum unde ratione at est, molestias amet possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo inventore a molestias quo cum, maiores molestiae aspernatur nam adipisci eaque quia autem iure non voluptates, possimus, repudiandae commodi? Sunt, voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis labore tempore quas iste recusandae, tempora fugit expedita laudantium asperiores sequi et architecto corrupti incidunt nobis possimus eum totam, soluta excepturi.</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia vel nam molestiae debitis voluptatibus, libero veniam cumque odio, deserunt pariatur, eligendi consequuntur? Expedita illo libero nostrum, consequuntur aspernatur asperiores exercitationem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio culpa, debitis assumenda cupiditate velit eveniet natus alias temporibus fuga ut ipsum. Asperiores eius excepturi accusamus doloremque pariatur amet fugiat labore.</p>
+</body>
+</html>
