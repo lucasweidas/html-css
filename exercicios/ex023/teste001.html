@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F8F9FA;
+            min-height: 100vh;
+        }
+
+        html a,
+        html a:visited,
+        html a:link,
+        html a:active {
+            text-decoration: none;
+            color: #0645AD;
+        }
+
+        html p {
+            line-height: 1.5em;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: "title title" "intro aside" "table aside";
+            gap: 1rem;
+            padding: 3rem clamp(1rem, 2vw, 3rem);
+            background-color: #fff;
+        }
+
+        @media (max-width: 770px) {
+            main {
+                grid-template-areas: "title title" "intro aside" "intro aside" "table table";
+            }
+        }
+
+        @media (max-width: 460px) {
+            main {
+                grid-template-areas: "title" "intro" "aside" "table";
+            }
+        }
+
+        .title {
+            grid-area: title;
+        }
+
+        .title > h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: clamp(1.3rem, 4vw, 3rem);
+            font-weight: 500;
+            border-bottom: 1px solid #A2A9B1;
+            padding-bottom: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .intro {
+            grid-area: intro;
+            height: fit-content;
+        }
+
+        .intro * {
+            font-size: clamp(0.8rem, 4vw, 1rem);
+        }
+
+        /* Tabela */
+        table {
+            grid-area: table;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table * {
+            font-size: clamp(0.4rem, 2vw, 1rem);
+        }
+
+        caption {
+            padding: 0.5rem;
+            background-color: #A2A9B1;
+        }
+
+        thead > tr {
+            background-color: #EAECF0;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            border: 1px solid #A2A9B1;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: #F8F9FA;
+        }
+
+        tbody > tr > td:nth-child(1),
+        tbody > tr > td:nth-child(3),
+        tbody > tr > td:nth-child(4) {
+            text-align: end;
+        }
+
+        tbody > tr > td img {
+            border: 1px solid #e4e5e7;
+        }
+
+        .aside {
+            grid-area: aside;
+            max-width: 290px;
+        }
+
+        .aside-img {
+            border: 1px solid #C8CCD1;
+            background-color: #F8F9FA;
+            margin-bottom: 1rem;
+            padding: 0.25rem;
+        }
+
+        .aside-img img {
+            border: 1px solid #C8CCD1;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .aside-img p {
+            font-size: 0.8rem;
+            padding: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1>Lista de países por população</h1>
+            <cite>
+                <p>Origem: <a href="https://pt.wikipedia.org/wiki/Lista_de_pa%C3%ADses_por_popula%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer">Wikipédia, a enciclopédia livre</a>.</p>
+            </cite>
+        </div>
+        <article class="intro">
+            <p>
+                Esta é uma lista de países e territórios dependentes pela população, baseada na norma <a href="https://pt.wikipedia.org/wiki/ISO_3166-1" target="_blank" rel="noopener noreferrer">ISO 3166-1</a>. A lista inclui os <a href="https://pt.wikipedia.org/wiki/Estado" target="_blank" rel="noopener noreferrer">Estados</a> <a href="https://pt.wikipedia.org/wiki/Soberania" target="_blank" rel="noopener noreferrer">soberanos</a>, territórios dependentes habitados e, em alguns casos, países que fazem parte de Estados soberanos. O <a href="https://pt.wikipedia.org/wiki/Reino_Unido" target="_blank" rel="noopener noreferrer">Reino Unido</a> é considerado como uma entidade única nesta lista, enquanto os <a href="https://pt.wikipedia.org/wiki/Pa%C3%ADses_constituintes" target="_blank" rel="noopener noreferrer">países constituintes</a> do <a href="https://pt.wikipedia.org/wiki/Reino_dos_Pa%C3%ADses_Baixos" target="_blank" rel="noopener noreferrer">Reino dos Países Baixos</a> são consideradas separadamente. De acordo com uma estimativa separada pelas Nações Unidas, a população mundial ultrapassou 7,874 bilhões em abril de 2021.
+            </p>
+        </article>
+
+        <aside class="aside">
+            <div class="aside-img">
+                <a href="https://pt.wikipedia.org/wiki/Ficheiro:World_population_percentage.png" target="_blank" rel="noopener noreferrer">
+                    <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/World_population_percentage.png/280px-World_population_percentage.png" decoding="async" width="280" height="303" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/35/World_population_percentage.png/420px-World_population_percentage.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/35/World_population_percentage.png/560px-World_population_percentage.png 2x" data-file-width="2006" data-file-height="2174">
+                </a>
+                <p>Percentagens da população mundial por país, em estimativa de 2017.</p>
+            </div>
+            <div class="aside-img">
+                <a href="https://pt.wikipedia.org/wiki/Ficheiro:World_population_percentage.png" target="_blank" rel="noopener noreferrer">
+                    <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Countries_and_Dependencies_by_Population_in_2014.svg/280px-Countries_and_Dependencies_by_Population_in_2014.svg.png" decoding="async" width="280" height="128" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Countries_and_Dependencies_by_Population_in_2014.svg/420px-Countries_and_Dependencies_by_Population_in_2014.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Countries_and_Dependencies_by_Population_in_2014.svg/560px-Countries_and_Dependencies_by_Population_in_2014.svg.png 2x" data-file-width="863" data-file-height="396">
+                </a>
+                <p>Países do mundo por população em 2014.</p>
+            </div>
+        </aside>
+
+        <table>
+            <caption>Países por População</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Posição</th>
+                    <th scope="col">País</th>
+                    <th scope="col">Estimativa da ONU</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Estimativa Oficial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/22px-Flag_of_the_People%27s_Republic_of_China.svg.png" decoding="async" width="22" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/33px-Flag_of_the_People%27s_Republic_of_China.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/44px-Flag_of_the_People%27s_Republic_of_China.svg.png 2x" data-file-width="900" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/China" target="_blank" rel="noopener noreferrer">China</a>
+                    </td>
+                    <td>1 411 780 000</td>
+                    <td>2021</td>
+                    <td><a href="http://www.stats.gov.cn/english/PressRelease/202105/t20210510_1817185.html#" target="_blank" rel="noopener noreferrer">Censo oficial</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/22px-Flag_of_India.svg.png" decoding="async" width="22" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/33px-Flag_of_India.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/44px-Flag_of_India.svg.png 2x" data-file-width="900" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/%C3%8Dndia" target="_blank" rel="noopener noreferrer">Índia</a>
+                    </td>
+                    <td>1 380 004 385</td>
+                    <td>2020</td>
+                    <td><a href="http://www.indiastat.com/popclockflash.aspx" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" decoding="async" width="22" height="12" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/33px-Flag_of_the_United_States.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/44px-Flag_of_the_United_States.svg.png 2x" data-file-width="1235" data-file-height="650">
+                        <a href="https://pt.wikipedia.org/wiki/Estados_Unidos" target="_blank" rel="noopener noreferrer">Estados Unidos</a>
+                    </td>
+                    <td>331 449 281</td>
+                    <td>2020</td>
+                    <td><a href="https://www.census.gov/data/tables/2017/demo/popest/state-total.html#par_textimage_1574439295" target="_blank" rel="noopener noreferrer">Censo oficial</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/22px-Flag_of_Indonesia.svg.png" decoding="async" width="22" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/33px-Flag_of_Indonesia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/44px-Flag_of_Indonesia.svg.png 2x" data-file-width="900" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/Indon%C3%A9sia" target="_blank" rel="noopener noreferrer">Indonésia</a>
+                    </td>
+                    <td>273 523 615</td>
+                    <td>2020</td>
+                    <td><a href="https://web.archive.org/web/20150725020946/http://www.bps.go.id/linkTabelStatis/view/id/1274" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/22px-Flag_of_Pakistan.svg.png" decoding="async" width="22" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/33px-Flag_of_Pakistan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/44px-Flag_of_Pakistan.svg.png 2x" data-file-width="900" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/Paquist%C3%A3o" target="_blank" rel="noopener noreferrer">Paquistão</a>
+                    </td>
+                    <td>220 892 340</td>
+                    <td>2020</td>
+                    <td><a href="http://www.pbs.gov.pk/content/population-census" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png" decoding="async" width="22" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/33px-Flag_of_Brazil.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/44px-Flag_of_Brazil.svg.png 2x" data-file-width="720" data-file-height="504">
+                        <a href="https://pt.wikipedia.org/wiki/Brasil" target="_blank" rel="noopener noreferrer">Brasil</a>
+                    </td>
+                    <td>213 317 639</td>
+                    <td>2021</td>
+                    <td><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2021-08/populacao-brasileira-chega-2133-milhoes-de-pessoas-em-2021" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/22px-Flag_of_Nigeria.svg.png" decoding="async" width="22" height="11" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/33px-Flag_of_Nigeria.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/44px-Flag_of_Nigeria.svg.png 2x" data-file-width="1200" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/Nig%C3%A9ria" target="_blank" rel="noopener noreferrer">Nigéria</a>
+                    </td>
+                    <td>206 139 589</td>
+                    <td>2020</td>
+                    <td><a href="http://esa.un.org/unpd/wpp/Publications/Files/Key_Findings_WPP_2015.pdf" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/22px-Flag_of_Bangladesh.svg.png" decoding="async" width="22" height="13" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/33px-Flag_of_Bangladesh.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/44px-Flag_of_Bangladesh.svg.png 2x" data-file-width="1000" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/Bangladesh" target="_blank" rel="noopener noreferrer">Bangladesh</a>
+                    </td>
+                    <td>164 689 383</td>
+                    <td>2020</td>
+                    <td><a href="https://web.archive.org/web/20110904045106/http://www.bbs.gov.bd/Home.aspx" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/22px-Flag_of_Russia.svg.png" decoding="async" width="22" height="15" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/33px-Flag_of_Russia.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/44px-Flag_of_Russia.svg.png 2x" data-file-width="900" data-file-height="600">
+                        <a href="https://pt.wikipedia.org/wiki/R%C3%BAssia" target="_blank" rel="noopener noreferrer">Rússia</a>
+                    </td>
+                    <td>145 934 462</td>
+                    <td>2020</td>
+                    <td><a href="http://demoscope.ru/weekly/app/popclock/popclock.php" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>
+                        <img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/22px-Flag_of_Mexico.svg.png" decoding="async" width="22" height="13" class="thumbborder" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/33px-Flag_of_Mexico.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/44px-Flag_of_Mexico.svg.png 2x" data-file-width="980" data-file-height="560">
+                        <a href="https://pt.wikipedia.org/wiki/M%C3%A9xico" target="_blank" rel="noopener noreferrer">México</a>
+                    </td>
+                    <td>128 932 753</td>
+                    <td>2020</td>
+                    <td><a href="https://web.archive.org/web/20171205030520/http://www.conapo.gob.mx/work/models/CONAPO/Proyecciones/Datos/Estimaciones_y_Proyecciones/2010_2030/RepublicaMexicana_pry.xlsx" target="_blank" rel="noopener noreferrer">Estimativa oficial</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

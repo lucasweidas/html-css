@@ -8,11 +8,13 @@
     <style>
         body {
             font-family: sans-serif;
+            min-height: 3000px;
         }
 
         table {
             width: 550px;
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -23,8 +25,15 @@
         }
 
         thead, tfoot {
-            background-color: rgb(115, 115, 115);
+            background-color: rgb(80, 80, 80);
             color: #fff;
+        }
+
+        thead > tr > th {
+            /* Position "sticky" é uma mistura entre "relative" e "fixed" */
+            position: sticky;
+            top: -1px;
+            background-color: rgb(80, 80, 80);
         }
 
         tbody > tr:nth-child(odd) { /* odd = impar (2n-1) | even = par (2n) */
