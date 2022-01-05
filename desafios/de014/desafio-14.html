@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 014 - Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .bg-cinza {
+            color: #fff;
+            background-color: #646464;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 0.75rem;
+        }
+
+        td:not(.disciplina) {
+            text-align: center;
+        }
+        
+        .bg-cinza td {
+            font-weight: 600;
+        }
+
+        .media {
+            text-align: start;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr class="bg-cinza">
+                <th scope="col" rowspan="2">Área</th>
+                <th scope="col" rowspan="2">Disciplinas</th>
+                <th scope="colgroup" colspan="2">Notas</th>
+                <th scope="col" rowspan="2">Média</th>
+            </tr>
+            <tr class="bg-cinza">
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="4">Exatas</th>
+                <td class="disciplina">Matemática</td>
+                <td>5.0</td>
+                <td>6.5</td>
+                <td>5.75</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Física</td>
+                <td>7.5</td>
+                <td>8.0</td>
+                <td>7.75</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Química</td>
+                <td>6.0</td>
+                <td>8.5</td>
+                <td>7.25</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Biologia</td>
+                <td>9.0</td>
+                <td>7.5</td>
+                <td>8.25</td>
+            </tr>
+            <tr class="bg-cinza">
+                <th scope="row" colspan="4" class="media">Média de Exatas</th>
+                <td>7.25</td>
+            </tr>
+            <tr>
+                <th scope="rowgroup" rowspan="2">Humanas</th>
+                <td class="disciplina">História</td>
+                <td>7.0</td>
+                <td>8.0</td>
+                <td>7.5</td>
+            </tr>
+            <tr>
+                <td class="disciplina">Geografia</td>
+                <td>8.5</td>
+                <td>9.0</td>
+                <td>8.75</td>
+            </tr>
+            <tr class="bg-cinza">
+                <th scope="row" colspan="4" class="media">Média de Humanas</th>
+                <td>8.12</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
