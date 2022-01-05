@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 0.5rem;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 0.5rem;
+        }
+
+        .azul {
+            background-color: cornflowerblue;
+        }
+
+        .amarelo {
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabelas</h1>
+
+    <table>
+        <!-- Com a tag "colgroup", você pode adicionar uma tag "col" para cada coluna da tabela, e com isso, personalizar a coluna da tabela. -->
+        <colgroup>
+            <!-- O atributo [span] dentro da tag "col", espalha os estilos aplicados para as colunas ao lado. -->
+            <col class="azul">
+            <col class="amarelo" span="2">
+            <col class="azul">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>Feminino</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Gustavo Freitas</td>
+            <td>Masculino</td>
+            <td>30</td>
+            <td>Engenheiro</td>
+        </tr>
+        <tr>
+            <td>Luiz Alberto</td>
+            <td>Masculino</td>
+            <td>20</td>
+            <td>Designer</td>
+        </tr>
+        <tr>
+            <td>Fernanda Ferreira</td>
+            <td>Feminino</td>
+            <td>22</td>
+            <td>Dentista</td>
+        </tr>
+        <tr>
+            <td>Lucas Rodrigues</td>
+            <td>Masculino</td>
+            <td>28</td>
+            <td>Advogado</td>
+        </tr>
+        <tr>
+            <td>Juliana Silva</td>
+            <td>Feminino</td>
+            <td>35</td>
+            <td>Médica</td>
+        </tr>
+    </table>
+</body>
+</html>
